@@ -1,0 +1,73 @@
+/* BLOBALES */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* Reset para REMS - 62.5% = 10px de 16px */
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+img {
+  max-width: 100%;
+}
+
+.contenedor {
+  max-width: 120rem; /* = 1200px*/
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.6rem;
+}
+
+.figuras {
+  background-color: lightseagreen;
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.figuras_uno {
+  background-color: lightblue;
+}
+
+.figuras_dos {
+  background-color: lightgreen;
+}
+
+.figuras_uno,
+.figuras_dos {
+  clip-path: polygon(
+    0 40px,
+    75px 0,
+    150px 40px,
+    150px 120px,
+    75px 160px,
+    0 120px
+  );
+
+  min-width: 15rem;
+height: 20rem;
+  margin: 0 0.5rem;
+}
