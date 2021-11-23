@@ -1,0 +1,97 @@
+/* BLOBALES */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* Reset para REMS - 62.5% = 10px de 16px */
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+img {
+  max-width: 100%;
+}
+
+.contenedor {
+  max-width: 120rem; /* = 1200px*/
+  margin: 2rem auto;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.6rem;
+}
+/*? -----Mobile first----- */
+
+.box {
+  background-color: lightseagreen;
+  /* Siempre medirá 150px con max-width */
+  max-width: 15rem;
+  min-width: 15rem;
+  width: 50%;
+  height: 30rem;
+}
+
+/*! en mobile first se ocupan media queries min-width */
+@media screen and (min-width: 768px) {
+  .box {
+    background-color: lightsalmon;
+    max-width: 25rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .box {
+    background-color: lightblue;
+    max-width: 35rem;
+  }
+}
+
+/*? -----Desktop first----- */
+
+.box-dos {
+  background-color: lightslategray;
+  /* En desktop se utiliza solo max-width */
+  max-width: 45rem;
+
+  width: 50%;
+  height: 30rem;
+}
+
+/*! en desktop first se ocupan media queries max-width */
+
+@media screen and (max-width: 1024px) {
+  .box-dos {
+    max-width: 35rem;
+    background-color: lightpink;
+  }
+}
+@media screen and (max-width: 768px) {
+  .box-dos {
+    max-width: 25rem;
+    background-color: lightgreen;
+  }
+}
+@media screen and (max-width: 360px) {
+  .box-dos {
+    max-width: 15rem;
+    min-width: 15rem;
+    background-color: lemonchiffon;
+  }
+}
